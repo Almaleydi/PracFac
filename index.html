@@ -17,8 +17,9 @@
      		var no1= parseInt($("#nume1").val());
      		var total=1;
      		    for(i=1;i<=no1;i++){
-     		    	total=total*1;
-                   alert("El resultado del factorial:"+ total);
+     		    	total*=i;
+                   //alert("El resultado del factorial:"+ total);
+                     $("#resultado").val(total);
      		    }
      		
      	});
@@ -26,7 +27,8 @@
      		var n1= parseInt($("#num1").val());
      		var n2= parseInt($("#num2").val());
      		var suma=n1+n2;
-     		alert("El resultado es:"+ suma);
+     		//alert("El resultado es:"+ suma);
+     		  $("#result").val(suma);
      	});
      });	
 	</script>
@@ -52,12 +54,13 @@
 <!-- interfaz de la pagina -->
 <div data-role="page" id="Factorial">
 	<div data-role="header">
+	 <a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="pop">Principal</a>
 		<p> Factorial </p>
 	</div>
 	<div data-role="content">
 		<input type="text" id="nume1" placeholder="Escribe un numero">
-		
 		<input type="button" id="btnFactorial" value="Calcular">
+		<input type="text" id="resultado" placeholder="Resultado">
 	</div>
 	<div data-role="footer">
 		<p>Pie de la aplicación</p>
@@ -67,12 +70,14 @@
 <!-- interfaz de la pagina -->
 <div data-role="page" id="Suma">
 	<div data-role="header">
+	<a href="#Principal" class="ui-btn ui-icon-home ui-btn-icon-left" data-transition="pop">Principal</a>
 		<p>Operacion Suma </p>
 	</div>
 	<div data-role="content">
 		<input type="text" id="num1" placeholder="Escribe un numero">
 		<input type="text" id="num2" placeholder="Escribe un numero">
 		<input type="button" id="btnsuma" value="Calcular">
+		<input type="text" id="result" placeholder="Resultado">
 	</div>
 	<div data-role="footer">
 		<p>Pie de la aplicación</p>
